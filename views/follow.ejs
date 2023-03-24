@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Follow</title>
+    <link rel="stylesheet" href="/css/follow.css">
+    <script src="/js/follow.js" defer></script>
+    <link rel="stylesheet" href="/css/global.css">
+
+</head>
+<body>
+
+
+<header>
+    <div class="home">
+        <a href="home-feed">
+            <button type="button">Home</button>
+        </a>
+    </div>
+    <div class="titel">
+        <a href="/search">
+            <button type="button">Search</button>
+        </a>
+    </div>
+    <div class="profile">
+        <a href="profile">
+            <button type="button">Profile</button>
+        </a>
+    </div>
+</header>
+
+<main>
+
+
+    <div class="follow-titel"><h1>Following</h1></div>
+    <div class="user-list">
+        <div></div>
+        <% for(let i = 0; i < followingUsers.length; i++) { %>
+            <div class="user-box">
+                <p><strong>Username:</strong> <%= followingUsers[i].username %></p>
+                <p><strong>Lastname:</strong> <%= followingUsers[i].lastname %></p>
+                <p><strong>Email:</strong> <%= followingUsers[i].email %></p>
+                <p><strong>Address:</strong> <%= followingUsers[i].address %></p>
+                <form action="/unfollow" method="post">
+                    <input type="hidden" name="followingId" value="<%= followingUsers[i].id %>">
+                    <button class="form-unfollow" type="submit">Unfollow</button>
+                </form>
+            </div>
+        <% } %>
+    </div>
+
+
+</main>
+
+
+</body>
+</html>

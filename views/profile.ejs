@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/profile.css">
+    <script src="/js/profile.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="titel">
+        <a href="/search">
+            <button type="button">Search</button>
+        </a>
+    </div>
+    <div class="titel">
+        <a href="/profile">
+            <button type="button">Profile</button>
+        </a>
+    </div>
+    <div class="logout-button">
+        <form action="/logout" method="POST">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</header>
+
+<main>
+    <div class="profile-box">
+        <h1 class="profile-title">Profile</h1>
+        <form action="/edit-profile" method="post" class="edit-profile-form">
+            <input type="text" name="username" value="<%= data.username %>" placeholder="First Name">
+            <input type="text" name="lastname" value="<%= data.lastname %>" placeholder="Lastname">
+            <input type="email" name="email" value="<%= data.email %>" placeholder="Email" required>
+            <input type="text" name="address" value="<%= data.address %>" placeholder="Address">
+            <input type="password" name="password" value="" placeholder="Password">
+            <button type="submit" class="button-submit">Save Changes</button>
+            <input class="button-submit" type="button" value="Delete Profile" onclick="showStepTwo()">
+            <input class="button-submit" type="button" value="Back Home" onclick="backHome()">
+            <input class="button-submit" type="button" value="Following" onclick="followPage()">
+        </form>
+        <form action="/delete-profile" method="post" class="confirm-delete">
+            <input class="button-submit" type="button" value="Back" onclick="showStepOne()">
+            <button type="submit" class="button-submit">Delete Profile</button>
+        </form>
+    </div>
+</main>
+
+
+</body>
+</html>

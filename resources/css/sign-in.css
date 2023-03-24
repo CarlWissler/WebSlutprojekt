@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #1877F2;
+    padding: 1rem;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+
+body {
+    background-color: #171A21;
+    color: black;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sign-in-box {
+    padding: 10px;
+    color: black;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 20px;
+    width: 600px;
+    height: 550px;
+    position: absolute;
+    top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: slide 1s ease-in-out;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+form h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: black;
+    text-align: center;
+}
+
+.sign-in-box input {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 400px;
+    height: 35px;
+    background-color: #171A21;
+    text-align: center;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+}
+
+
+form .login-button {
+    background-color: #1877F2;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    height: 40px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+form a {
+    color: #1877F2;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+
+input:focus {
+    animation: input-focus-animation 0.5s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+::-ms-reveal {
+    display: none;
+}
+
+
+
+
+/* animation keyframes*/
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateX(100%) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+
+@keyframes input-focus-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries */
+@media only screen and (max-width: 680px) {
+    .sign-in-box {
+        width: 80vw;
+        height: 50%;
+    }
+
+    form .login-submit {
+        width: 40%;
+        font-size: 1rem;
+    }
+
+    .sign-in-box input {
+        width: 80%;
+        height: 35px;
+    }
+}
+

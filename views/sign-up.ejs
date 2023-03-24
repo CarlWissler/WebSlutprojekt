@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/sign-up.css">
+    <script src="/js/sign-up.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="titel">
+        <a href="/"><h1>User Base</h1></a>
+    </div>
+</header>
+
+<main>
+    <div class="sign-up-box">
+        <form action="/sign-up" method="post">
+            <div class="sign-in-box-1">
+                <h1>Register</h1>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input class="sign-in-submit" type="button" value="Next" onclick="showStepTwo()">
+                <a href="sign-in"><h3>Login</h3></a>
+            </div>
+            <div class="sign-in-box-2">
+                <h1>Register</h1>
+                <input type="text" name="username" placeholder="First Name">
+                <input type="text" name="lastname" placeholder="Lastname">
+                <input type="text" name="address" placeholder="Adress">
+                <input class="sign-in-submit" type="button" value="Back" onclick="showStepOne()">
+                <input class="sign-in-submit" type="submit" value="Register">
+            </div>
+        </form>
+    </div>
+</main>
+
+
+</body>
+</html>

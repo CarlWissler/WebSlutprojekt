@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1877F2;
+    padding: 1rem;
+}
+
+header button {
+    background-color: #1877F2;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+body {
+    background-color: #171A21;
+    color: black;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile-box {
+    padding: 10px;
+    color: black;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 20px;
+    width: 600px;
+    height: 550px;
+    position: absolute;
+    top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-profile-form input {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 400px;
+    height: 35px;
+    background-color: #171A21;
+    text-align: center;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.edit-profile-form input:focus {
+    outline: none;
+    animation: input-focus-animation 0.5s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+form h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: black;
+    text-align: center;
+}
+
+form .button-submit {
+    background-color: #1877F2;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    height: 40px;
+    width: 205px;
+    margin-bottom: 10px;
+}
+
+.logout-submit {
+    background-color: #1877F2;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.profile-titel {
+    margin-bottom: 2rem;
+}
+
+
+@keyframes input-focus-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .profile-box {
+        width: 90vw;
+        height: 80%;
+        font-size: 60%;
+    }
+
+    .edit-profile-form input {
+        width: 80%;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    form .button-submit {
+        width: 135px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .profile-titel {
+        font-size: 2rem;
+    }
+
+    header button {
+        font-size: 1rem;
+    }
+
+    header {
+        padding: 0.5rem;
+    }
+
+    .profile-box {
+        top: 12%;
+    }
+}
+
+
+
+

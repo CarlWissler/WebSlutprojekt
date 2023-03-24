@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Base</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/home-feed.css">
+    <script src="/js/home-feed.js"></script>
+</head>
+<body>
+<header>
+    <div class="logout-button">
+        <form action="/logout" method="POST">
+            <button class="logout-submit" type="submit">Logout</button>
+        </form>
+    </div>
+    <div class="titel">
+        <a href="/search">
+            <button type="button">Search</button>
+        </a>
+    </div>
+    <div class="profile">
+        <a href="profile">
+            <button type="button">Profile</button>
+        </a>
+    </div>
+</header>
+
+
+<main>
+
+
+    <div class="home-feed-titel"><h1>Home Feed</h1></div>
+    <div class="user-list">
+        <% for(let i = 0; i < data.length; i++) { %>
+            <div class="user-box">
+                <p><strong>Username:</strong> <%= data[i].username %></p>
+                <p><strong>Lastname:</strong> <%= data[i].lastname %></p>
+                <p><strong>Email:</strong> <%= data[i].email %></p>
+                <p><strong>Address:</strong> <%= data[i].address %></p>
+                <form action="/follow" method="post">
+                    <input type="hidden" name="followingId" value="<%= data[i].id %>">
+                    <button class="form-follow" type="submit">Follow</button>
+                </form>
+            </div>
+        <% } %>
+    </div>
+
+
+</main>
+

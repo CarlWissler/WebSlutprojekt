@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1877F2;
+    padding: 1rem;
+}
+
+header button {
+    background-color: #1877F2;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+body {
+    background-color: #171A21;
+    color: black;
+}
+
+
+main {
+    animation: slide 1s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateZ(0);
+}
+
+
+.user-box {
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 20px;
+    width: 700px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    will-change: transform;
+}
+
+.user-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.4rem;
+
+}
+
+.follow-titel {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+}
+
+form .form-unfollow {
+    background-color: #1877F2;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    height: 40px;
+    width: 205px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Phone */
+@media only screen and (max-width: 750px) {
+    .user-box {
+        width: 70vw;
+        height: 50%;
+        font-size: 1.5rem;
+    }
+
+    .follow-titel {
+        margin-top: 10px;
+        font-size: 1.5rem;
+    }
+
+    header button {
+        font-size: 1rem;
+    }
+
+    header {
+        padding: 0.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+    .user-box {
+        width: 85vw;
+        height: 50%;
+        font-size: 1rem;
+    }
+
+    .follow-titel {
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+
+    form .form-unfollow {
+        width: 40%;
+        height: 40%;
+        font-size: 1rem;
+        padding: 5px;
+    }
+}

@@ -46,7 +46,10 @@ const Users = mongoose.model('User', user);
 app.set("view engine", "ejs");
 app.use(express.urlencoded({extended: false}));
 app.use(session({
-    secret: 'your-secret-key', resave: false, saveUninitialized: false,
+    secret: 'your-secret-key',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {maxAge: 1000 * 60 * 10} // 10 minutes
 }));
 app.use(express.static("resources"));
 

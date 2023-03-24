@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/search-results.css">
+    <script src="/js/search-results.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="titel">
+        <a href="/search">
+            <button type="button">Search</button>
+        </a>
+    </div>
+    <div class="titel">
+        <a href="/profile">
+            <button type="button">Profile</button>
+        </a>
+    </div>
+    <div class="logout-button">
+        <form action="/logout" method="POST">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</header>
+<main>
+
+
+    <div class="search-results-titel"><h1>Search Results</h1></div>
+    <% if (users.length > 0) { %>
+        <% for (let i = 0; i < users.length; i++) { %>
+            <div class="search-list">
+                <div>
+                    <p><strong>Username:</strong> <%= users[i].username %></p>
+                    <p><strong>Lastname:</strong> <%= users[i].lastname %></p>
+                    <p><strong>Email:</strong> <%= users[i].email %></p>
+                    <p><strong>Address:</strong> <%= users[i].address %></p>
+                    <form action="/follow" method="post">
+                        <input type="hidden" name="followingId" value="<%= users[i].id %>">
+                        <button class="form-follow" type="submit">Follow</button>
+                    </form>
+                </div>
+            </div>
+
+        <% } %>
+    <% } else { %>
+        <div class="search-list">
+            <p>No users found.</p>
+            <a href="/home-feed">Back to Home Feed</a>
+            <a href="/search">Search again</a>
+        </div>
+    <% } %>
+
+</main>
+</body>
+</html>

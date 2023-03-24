@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1877F2;
+    padding: 1rem;
+}
+
+header button {
+    background-color: #1877F2;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+body {
+    background-color: #171A21;
+    color: black;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    animation: slide 1s ease-in-out;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+a {
+    color: #1877F2;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+
+.search-list {
+    padding: 15px;
+    color: black;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 20px;
+    width: 700px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+}
+
+
+.back-home {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+form .form-follow {
+    background-color: #1877F2;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    height: 40px;
+    width: 205px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+
+/* Animation */
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+/* Media queries */
+@media only screen and (max-width: 800px) {
+    .search-list {
+        width: 80vw;
+        height: 50%;
+        font-size: 1rem;
+    }
+
+    a {
+        font-size: 1rem;
+    }
+    form .form-follow {
+        width: 40%;
+        height: 40%;
+        font-size: 1rem;
+        padding: 5px;
+    }
+}
